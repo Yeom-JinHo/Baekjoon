@@ -1,0 +1,12 @@
+n, k = map(int, (input().split()))
+ls = list()
+cnt = 0
+
+for i in range(n):
+    ls.append(int(input()))
+ls.sort(reverse=True)
+for i in ls:
+    cnt += k//i
+    k = k % i
+
+print(cnt)
