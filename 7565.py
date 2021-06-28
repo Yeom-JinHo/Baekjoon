@@ -1,6 +1,5 @@
 from collections import deque
 from sys import stdin
-from typing import get_args
 
 
 def bfs(graph, que):
@@ -49,5 +48,3 @@ if max == 1:
     print(0)
 else:
     print(max-1)
-for kk in cnt:
-    print(kk)
