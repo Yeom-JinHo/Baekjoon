@@ -1,9 +1,9 @@
-n=int(input())
-ls=[]
+import sys
+n = int(sys.stdin.readline())
+ls = []
 for i in range(n):
-    x,y=map(int,input().split())
-    ls.append([x,y])
+    x, y = map(int, sys.stdin.readline().split())
+    ls.append([x, y])
 ls.sort()
-for k in range(len(ls)):
-    print(ls[k][0],end=' ')
-    print(ls[k][1])
+for i in range(n):
+    print(ls[i][0], ls[i][1])
