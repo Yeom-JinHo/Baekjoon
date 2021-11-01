@@ -24,7 +24,7 @@ int dfs(int row, int col)
     }
   }
   return count;
-}
+}-
 int main()
 {
   list<int> answer;
