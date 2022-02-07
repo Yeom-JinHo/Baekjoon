@@ -26,8 +26,10 @@ n,m=map(int,sys.stdin.readline().split());
 board=list();
 for r in range(n):
   board.append(sys.stdin.readline().rstrip());
-result=list();
+minCount=9*9+1;
 for r in range(n-7):
   for c in range(m-7):
-    result.append(check(r,c));
-print(min(result));
+      count=check(r,c);
+      if minCount>count:
+        minCount=count;
+print(minCount)
