@@ -2,7 +2,6 @@ import sys
 
 X=int(sys.stdin.readline());
 
-# li=[64]
 init=64;
 count=0;
 while X>=1:
