@@ -24,6 +24,3 @@ while end<len(prime):
   else:
     end+=1;
 print(result)
-
-print(prime)
-print(prime[0:2])
