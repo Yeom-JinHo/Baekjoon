@@ -5,29 +5,31 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.StringTokenizer;
 
-class Main{
+class Main_1074_염진호{
   public static void main(String[] args) throws IOException{
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
     StringTokenizer st = new StringTokenizer(br.readLine());
     int N=Integer.parseInt(st.nextToken());
-    int[] dp=new int[5001];
-    for(int i=0;i<5001;i++){
-      dp[i]=Integer.MAX_VALUE;
+    int R=Integer.parseInt(st.nextToken());
+    int C=Integer.parseInt(st.nextToken());
+    //  td 위인지 아랜지 , lr 왼쪽인지 오른쪽인지 , starNum 
+    int td;
+    int lr;
+    int len;
+    int startNum=0;
+    for(int i=N;i>0;i--){
+      len =(int)Math.pow(2,i-1);
+      td = R>=len? 1 : 0;
+      lr = C>=len? 1 : 0;
+      int rr=(int)Math.pow(2,2*i-1)*td;
+      int cc=(int)Math.pow(2,2*i-2)*lr;
+      startNum+=rr+cc;
+      R-=len*td;
+      C-=len*lr;
     }
-    dp[3]=1;
-    dp[5]=1;
-    for(int i=6;i<=N;i++){
-      if(dp[i-3]!=Integer.MAX_VALUE)
-        dp[i]=Math.min(dp[i],dp[i-3]+1);
-      if(dp[i-5]!=Integer.MAX_VALUE)
-        dp[i]=Math.min(dp[i],dp[i-5]+1);
-    }
-    if(dp[N]!=Integer.MAX_VALUE)
-      bw.write(dp[N]+"\n");
-    else
-      bw.write("-1"+"\n");
+    bw.write(startNum+"\n");
     bw.flush();
     bw.close();
     br.close();
