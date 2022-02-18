@@ -6,7 +6,7 @@ import java.io.OutputStreamWriter;
 import java.util.LinkedList;
 import java.util.StringTokenizer;
 
-class Main{
+class Main_15683_염진호{
   static int N,M,answer;
   static int[][] arr;
   static boolean first;
