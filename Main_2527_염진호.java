@@ -21,12 +21,15 @@ class Main_2527_염진호{
       int min_Y_2=Integer.parseInt(st.nextToken());
       int max_X_2=Integer.parseInt(st.nextToken());
       int max_Y_2=Integer.parseInt(st.nextToken());
+
       // 9구역으로 나눠보자
       // 1 |2| 3
       // 4 |X| 5
       // 6 |7| 8
+      
       // 1 4 6 처리
       if(min_X_1>=max_X_2){
+
         // 선분 or 점
         if(min_X_1==max_X_2){
           // 1 처리
@@ -38,7 +41,6 @@ class Main_2527_염진호{
             bw.write("d"+"\n");
             continue;
           }
-
           // 6 처리
           if(min_Y_1>=max_Y_2){
             if(min_Y_1==max_Y_2){
