@@ -1,4 +1,3 @@
-from gettext import find
 import sys
 def dfs(sr,sc):  
   i=dd.index(arr[sr][sc]);
