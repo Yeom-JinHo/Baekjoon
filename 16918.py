@@ -1,5 +1,4 @@
 import sys
-import copy
 
 dr=[0,0,-1,1]
 dc=[1,-1,0,0]
@@ -21,7 +20,7 @@ for i in range(2,N+1):
   for r in range(R):
     for c in range(C):
       arr[r][c]=arr[r][c]-1;
-
+      
   if i%2==0:
     for r in range(R):
       for c in range(C):
