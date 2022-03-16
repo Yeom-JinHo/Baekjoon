@@ -14,5 +14,4 @@ for a in arr:
     boxSize=M-a;
   else:
     boxSize-=a;
-  print(a,boxSize,count)
 print(count)
