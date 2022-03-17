@@ -22,11 +22,16 @@ for r in range(1,N+1):
 C=int(sys.stdin.readline());
 for _ in range(C):
   sr,sc,er,ec=map(int,sys.stdin.readline().split());
-  answer=0;
+  count=[0]*11;
   for i in range(1,11):
-    answer+=arr[i][sr-1][sc-1];
-    answer-=arr[i][sr-1][ec];
-    answer-=arr[i][er][sc-1];
-    answer+=arr[i][er][ec]
+    count[i]+=arr[i][sr-1][sc-1];
+    count[i]-=arr[i][sr-1][ec];
+    count[i]-=arr[i][er][sc-1];
+    count[i]+=arr[i][er][ec]
+  
+  answer=0;
+  for c in count:
+    if c>0:
+      answer+=1;
 
   print(answer);
