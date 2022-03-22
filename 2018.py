@@ -1,21 +1,21 @@
 import sys
 
-n=int(sys.stdin.readline());
-
-start=0;
-end=0;
+N=int(sys.stdin.readline());
 count=0;
-tmp=0;
-while start<=end and end<n:
-  if tmp==n:
+total=1;
+p1=1
+p2=1;
+while p1<=N:
+  if total==N:
     count+=1;
-    tmp+=end;
-    end+=1
-  elif tmp>n:
-    tmp-=start;
-    start+=1
+    p1+=1;
+    p2=p1
+    total=p1;
+  elif total>N:
+    p1+=1;
+    p2=p1
+    total=p1;
   else:
-    tmp+=end
-    end+=1
-
-print(count+1)
+    p2+=1;
+    total+=p2;
+print(count)
