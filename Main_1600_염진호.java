@@ -7,7 +7,7 @@ import java.util.Deque;
 import java.util.LinkedList;
 import java.util.StringTokenizer;
 
-class Main{
+class Main_1600_염진호{
   static int K,R,C;
   static int[][] arr;
   static int[][][] visitCount;
